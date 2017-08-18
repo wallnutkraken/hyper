@@ -1,5 +1,5 @@
 //+build !windows
-package hyper
+package hservice
 
 import (
 	"github.com/takama/daemon"

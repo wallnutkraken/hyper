@@ -20,6 +20,11 @@ func main() {
 			Usage: "Used to start the hyper daemon",
 			Action: coms.Start,
 		},
+		cli.Command{
+			Name: "init",
+			Usage: "Installs the daemon into the operating system",
+			Action: coms.Init,
+		},
 	}
 
 	hyperApp.Run(os.Args)
