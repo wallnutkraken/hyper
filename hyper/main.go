@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/urfave/cli"
 	"os"
+	"github.com/wallnutkraken/hyper/hyper/coms"
 )
 
 func main() {
@@ -14,6 +15,11 @@ func main() {
 
 	/* Set up the commands */
 	hyperApp.Commands = []cli.Command {
+		cli.Command{
+			Name: "start",
+			Usage: "Used to start the hyper daemon",
+			Action: coms.Start,
+		},
 	}
 
 	hyperApp.Run(os.Args)
