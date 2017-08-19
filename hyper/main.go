@@ -25,6 +25,11 @@ func main() {
 			Usage: "Installs the daemon into the operating system",
 			Action: coms.Init,
 		},
+		cli.Command{
+			Name: "remove",
+			Usage: "Removes the daemon from the system",
+			Action: coms.Remove,
+		},
 	}
 
 	hyperApp.Run(os.Args)

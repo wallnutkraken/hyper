@@ -8,6 +8,10 @@ import (
 )
 
 func Init(c *cli.Context) {
+	if !hservice.IsSupported() {
+		fmt.Println("error: platform not supported")
+		os.Exit(1)
+	}
 	dae, err := hservice.New()
 	if err != nil {
 		fmt.Printf("error: %s\n", err.Error())
